@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressions 6.0: Event Recap & Future Planning Notes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+        }
+        
+        .header p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .glows {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .grows {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .responsibilities {
+            background: #e8f4fd;
+            border-left: 4px solid #2196F3;
+        }
+        
+        .recommendations {
+            background: #e2e3ff;
+            border-left: 4px solid #6f42c1;
+        }
+        
+        /* Color coding for issues, impacts, and recommendations */
+        .issue {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .impact {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .future-consideration {
+            background-color: #e8f5e8;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .issue-label {
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .impact-label {
+            color: #f57c00;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .future-label {
+            color: #388e3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .guiding-principle {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        
+        .apology {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #e91e63;
+        }
+        
+        .proposal {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .org-chart {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px solid #dee2e6;
+        }
+        
+        .role {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #6c757d;
+        }
+        
+        .role h4 {
+            margin-top: 0;
+            color: #495057;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 10px 0;
+        }
+        /* Styles for image containers to ensure full image visibility */
+        .image-container-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .image-card {
+            border: 2px solid; /* Border color set dynamically by JS or parent */
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column; /* Stack image and text vertically */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-card img {
+            width: 100%; /* Make image fill its container */
+            height: auto;
+            border-radius: 3px;
+            object-fit: contain; /* Ensure entire image is visible */
+        }
+
+        .image-card p {
+            font-size: 0.9em;
+            color: #666;
+            margin: 10px 0 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Expressions 6.0: Event Recap & Future Planning Notes</h1>
+        <p><strong>For:</strong> FTC Leadership and future planning committees</p>
+        <p><strong>From:</strong> Brian Sullivan</p>
+        <p><strong>Date:</strong> June 3, 2025</p>
+    </div>
+
+    <div class="section">
+        <p>This document outlines key aspects of the Expressions 6.0 talent show for posterity, offering insights into successes ("Glows") and areas for improvement ("Grows") to benefit future events.</p>
+    </div>
+
+    <div class="section glows">
+        <h2><span class="emoji">✨</span>1. GLOWS (Highlights & Successes)</h2>
+
+        <h3>1. Increased Rehearsal Effectiveness</h3>
+        <ul>
+            <li>Hosting rehearsals four days a week (up from two previously) for three weeks allowed significantly more hands-on coaching and development time with students</li>
+            <li>We shifted from having all kids at one rehearsal to smaller groupings of kids at rehearsal. That was an intentional shift this year, and that was definitely a glow</li>
+        </ul>
+
+        <h3>2. Student Engagement & Responsibility</h3>
+        <ul>
+            <li>Older students (7th/8th graders) took initiative in helping me load and unload heavy equipment (speakers, mics, mixer) daily from my car</li>
+            <li>These older students also responsibly escorted younger students back to aftercare, allowing adults to move on</li>
+        </ul>
+
+        <h3>3. Enhanced Student Preparedness & Confidence</h3>
+        <ul>
+            <li>I would coach them on "If you're prepared, you won't be scared" and that resonated</li>
+            <li>Increased practice, mind-muscle connection work, and visualization led to kids being really mature, more confident performers this year compared to last</li>
+        </ul>
+
+        <h3>4. Stronger Student Camaraderie</h3>
+        <ul>
+            <li>A positive culture and stronger sense of camaraderie among the student performers was evident, beautifully reflected in the final song</li>
+        </ul>
+
+        <h3>5. Early Rehearsal Start</h3>
+        <ul>
+            <li>Starting rehearsals three weeks prior to the show rather than two weeks prior to the show provided a good foundation (though future planning could start even earlier for key deadlines)</li>
+        </ul>
+
+        <h3>6. Student Production Team Initiative</h3>
+        <ul>
+            <li>We started something called a student intern team. I put their names on the back of the program and they showed great interest and dedication in learning and executing their roles in drone operation, photography, and spotlighting</li>
+            <li>This indicates strong potential for a student intern program, maybe connected to after school enrichments. It's a natural conduit for kids who are interested in the more behind the scenes aspects of things. It could be more year round, or at least that trimester</li>
+        </ul>
+    </div>
+
+    <div class="section grows">
+        <h2><span class="emoji">🌱</span>2. GROWS (Key Challenges & Considerations for Future Events)</h2>
+        <p>These are critical areas where operational changes can significantly improve future events. The structure below is: <span class="issue-label">ISSUE</span> ➡️ <span class="impact-label">IMPACT</span> ➡️ <span class="future-label">🌱 FUTURE CONSIDERATION</span></p>
+
+        <h3>2.1. Technical Integrity - Primary Speaker Unplugged for More Than Half the Performance</h3>
+        
+        <div class="issue">
+            <div class="issue-label">● ISSUE:</div>
+            <p>Early in the show (during early vocal performances including AJ's and Journey's), the entire right-side main speaker was unplugged by parent volunteer for more than half the performance</p>
+        </div>
+
+        <div class="impact">
+            <div class="impact-label">● IMPACT:</div>
+            <ol>
+                <li>The overall mix was completely imbalanced, and to the audience this sounded like low volume of the vocals</li>
+                <li>This was not a "mic too low" issue but a complete loss of sound output from one side</li>
+                <li>This issue was identified and rectified by Steve much later, around the time the middle school acts began. Steve is a parent volunteer who worked with me in the past, and who has a young grandchild who will be in the community for a while and will be a great person to continue to own this work in the future</li>
+                <li>This is why later acts generally sounded louder and fuller</li>
+            </ol>
+        </div>
+
+        <div class="impact">
+            <div class="impact-label">● CAUSE (Context):</div>
+            <p>It was the cinematography volunteer's first year. We introduced them and their team for cinematography. You may have noticed the giant spotlights that are on each side of the stage - that was new for this year. The consequence of that is they needed to plug in their equipment, and when they were doing some power shifting around, their equipment needed an outlet that led to a combination of powering off the speaker and they accidentally forgot to plug the speaker back on.</p>
+        </div>
+
+        <div class="future-consideration">
+            <div class="future-label">● 🌱 FUTURE CONSIDERATION:</div>
+            <ol>
+                <li>Designate a single, technically knowledgeable point person (or very small, clearly defined team) solely responsible for ALL power distribution and audio/lighting connections</li>
+                <li>No other individuals should adjust or unplug critical equipment without direct confirmation from this lead</li>
+                <li>Conduct a full system sound check immediately before doors open and after any changes to power or connections are made</li>
+                <li>An intermission (see Grow 2.2) would have provided a crucial window to diagnose and fix this critical issue much sooner</li>
+            </ol>
+        </div>
+
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; border: 2px solid #dee2e6;">
+            <h4 style="margin-top: 0; color: #495057; text-align: center;">Visual Documentation: Speaker Power Status</h4>
+            <p style="text-align: center; margin-bottom: 15px; font-style: italic;">Overhead shots from the student drone intern showing the speaker power configuration</p>
+            
+            <div class="image-container-wrapper">
+                <div style="text-align: center;">
+                    <h5 style="margin-bottom: 10px; color: #28a745;">✅ 10 Minutes Before Show Start - Both Speakers Powered On</h5>
+                    <div class="image-card" style="border-color: #28a745;" onclick="window.open('https://www.flickr.com/photos/143309937@N04/54566522594/in/dateposted-public/', '_blank')">
+                        <img src="https://live.staticflickr.com/65535/54565460437_77ab36dce5_m.jpg" alt="Both speakers powered on - green arrows pointing to both speakers">
+                        <p>📸 Click to view full size | Green arrows show both speakers powered on as configured</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <h5 style="margin-bottom: 10px; color: #dc3545;">❌ During Show - After Cinematographer Power Issue</h5>
+                    <div class="image-card" style="border-color: #dc3545;" onclick="window.open('https://www.flickr.com/photos/143309937@N04/54566522604/in/dateposted-public/', '_blank')">
+                        <img src="https://live.staticflickr.com/65535/54566337221_e9c3658c2a_m.jpg" alt="Right speaker powered off - green arrow on left speaker still on, red arrow on right speaker showing it's off">
+                        <p>📸 Click to view full size | Green arrow shows left speaker still on, red arrow shows right speaker accidentally powered off</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>2.2. Program Finalization & Live Event Adaptability</h3>
+
+        <h4>2.2.1. Issue 1: Extremely Late Program Order Finalization</h4>
+        
+        <div class="issue">
+            <div class="issue-label">● ISSUE 1:</div>
+            <p>The graphical event program order, initially agreed upon Tuesday, underwent significant revisions. Despite consistent requests for updates, the final order was not confirmed by the show director until 3:00 PM on Friday (event day)</p>
+        </div>
+
+        <div class="impact">
+            <div class="impact-label">● IMPACT 1:</div>
+            <ol>
+                <li><strong>Graphics Redesign Rush:</strong> Left only one hour to completely redesign the graphical program, incorporate new information, finalize the layout, deliver it to Molly for printing/distribution, and travel to the venue</li>
+                <li><strong>Delayed Arrival & Critically Shortened Soundcheck:</strong> Consequently, I arrived at 5:00 PM. This allowed minimal time for any soundcheck, critically impacting the 7th Grade Boys who had specifically missed that week's soundcheck and the dress rehearsal due to conflicting school-sanctioned track and choir schedules
+                    <ul><li><strong>First-Ever Testing:</strong> This performance was their first-ever time testing their mics and vocals together on this system</li></ul>
+                </li>
+                <li><strong>Loss of Show Automation ➡️ Mandatory Manual Operation:</strong>
+                    <ul>
+                        <li>I had invested many hours pre-programming all microphone settings, music cues, and lighting notes into an automated sequence tied to the original program order</li>
+                        <li><strong>System Capabilities:</strong> This system allows for near hands-free operation between acts (e.g., a separate non technical person, in this case the live stream intern, could press "Act 2" and all settings would load for that act)</li>
+                        <li><strong>Complete Reordering Impact:</strong> The last-minute complete reordering made this automation unusable as there was no time to reprogram</li>
+                    </ul>
+                </li>
+                <li><strong>Compromised Backstage Role:</strong>
+                    <ul>
+                        <li>The shift to 100% manual, hands-on audio mixing for every act meant I was physically tied to the soundboard</li>
+                        <li><strong>Limited Capacity:</strong> This severely limited my ability to provide planned backstage coaching, manage student flow/discipline (as I was the only adult consistently backstage), and oversee the student production team</li>
+                        <li><strong>Additional Issues:</strong> This also contributed to issues like a performer playing with their mic until the battery died, as direct oversight was split</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="future-consideration">
+            <div class="future-label">● 🌱 FUTURE CONSIDERATION 1:</div>
+            <ol>
+                <li>Implement a strict 48-hour (or earlier) pre-event deadline for ALL program content and and order finalization. This is non-negotiable for graphical programs requiring design and for technical programming</li>
+                <li>Any changes after this deadline must be by collective agreement of a core event leadership team (e.g., FTC leads, technical lead, host), with full understanding of the technical and logistical ripple effects</li>
+                <li>Consider scheduling the overall event arc (major performance blocks, intermission) 2–3 months in advance to minimize conflicts with other school activities</li>
+            </ol>
+        </div>
+
+        <h4>2.2.2. Issue 2: On-the-Fly Program Deviations (Intermission & Act Order)</h4>
+        
+        <div class="issue">
+            <div class="issue-label">● ISSUE 2:</div>
+            <ol>
+                <li>There was a planned intermission that was crucial for technical resets and was on the program. This intermission was cancelled by the host on stage</li>
+                <li>A real-time decision was also made for the 7th Grade Boys to perform immediately after Adanya's performance of "Hallelujah," deviating from the revised program which had a dance act next
+                    <ul><li>(The original program draft allowed for this buffer after "Hallelujah" for this very reason, but it was redone)</li></ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="impact">
+            <div class="impact-label">● IMPACT 2:</div>
+            <ol>
+                <li><strong>Loss of Critical Reset Window:</strong> Cancelling the intermission eliminated the only planned opportunity to address technical issues (like the speaker outage), check mic batteries, or make adjustments</li>
+                <li><strong>Missed Announcement Opportunities:</strong> If the concern is people getting out of their chairs, that's understandable reasoning, but from a production standpoint it has downstream impacts. If the underlying value is how can we do an intermission that doesn't disrupt or force people to get up, it's an opportunity for school announcements, or showing content like the 8th Grade DC trip video</li>
+                <li><strong>Eliminated "Hail Mary" Mic Check for 7th Grade Boys:</strong> The planned dance act following Adanya was the last potential, albeit rushed, opportunity for a quick mic level check for the boys</li>
+                <li><strong>Direct Performance Impact:</strong> Removing this act and moving them up directly resulted in them going on stage with untested levels on three separate, complex wireless microphone systems</li>
+                <li><strong>Budget Constraints Context:</strong> There was a budget constraint that limited how we could do the wireless microphone system. Rather than having a four or eight channel system, I had to jerry rig four separate wireless systems, one and two at a time, due to budget constraints</li>
+            </ol>
+            
+            <div class="highlight">
+                <strong>Future Consideration:</strong> The connection to this is for the school to invest in a microphone system and think about how that allows for groups to perform and partnerships to be made, like BJ and his group who started performing in the fourth grade together - they named their group the Black Stars. They became closer as friends from performing together, and expressions can have grouped acts. The idea of groups and tools to facilitate that, like multiple microphones on standby, absolutely allows for bonds to form in a different kind of way, lifelong bonds, and so there's value attached to having an in-house system with multiple microphones.
+            </div>
+        </div>
+
+        <div class="future-consideration">
+            <div class="future-label">● 🌱 FUTURE CONSIDERATION 2:</div>
+            <ol>
+                <li>The intermission should be considered a non-negotiable production element. Its value for technical adjustments, performer well-being, and audience experience is immense</li>
+                <li>Real-time changes to the running order should be avoided unless absolutely critical and, if possible, discussed with the technical lead due to their significant impact on a live, cued show</li>
+                <li>Consider performer needs (e.g., emotional recovery after a powerful song) during initial program scheduling</li>
+            </ol>
+        </div>
+
+        <h3>2.3. On-Stage Communication & Performer Blocking</h3>
+
+        <h4>2.3.1. Issue 1 (Public Technical Call-Outs)</h4>
+        
+        <div class="issue">
+            <div class="issue-label">● ISSUE 1:</div>
+            <p>Throughout the event, I was the only individual repeatedly and publicly addressed by name on the microphone by the host regarding technical issues</p>
+            <ol><li>Many of which were direct results of the aforementioned external factors (speaker outage, program changes impacting automation)</li></ol>
+        </div>
+
+        <div class="impact">
+            <div class="impact-label">● IMPACT 1:</div>
+            <ol><li>This created an unfair and embarrassing public perception, especially as the full context of the issues was not shared</li></ol>
+        </div>
+
+        <div class="future-consideration">
+            <div class="future-label">● 🌱 FUTURE CONSIDERATION 1:</div>
+            <ol>
+                <li>Establish clear, discreet communication channels (e.g., a designated runner, subtle hand signals if close enough, or brief off-stage consults) between on-stage hosts and the technical lead for addressing issues during a live show</li>
+                <li>Avoid public troubleshooting or calling out individuals by name</li>
+                <li>Use generic terms like "DJ" or "Sound Booth" if a general cue is needed</li>
+            </ol>
+        </div>
+
+        <h4>2.3.2. Issue 2 (Host Microphone Feedback)</h4>
+        
+        <div class="issue">
+            <div class="issue-label">● ISSUE 2:</div>
+            <ol><li>The host microphone frequently caused feedback due to positioning, often standing directly in front of main or monitor speakers</li></ol>
+        </div>
+
+        <div class="impact">
+            <div class="impact-label">● IMPACT 2:</div>
+            <ol><li>This required me to constantly and manually adjust her microphone levels (often muting/lowering it preemptively when she moved near speakers) to prevent loud, disruptive feedback, then quickly raise it when she spoke again. What this looked like to the audience is her over and over saying, "Brian turn my mic on"</li></ol>
+        </div>
+
+        <div class="future-consideration">
+            <div class="future-label">● 🌱 FUTURE CONSIDERATION 2:</div>
+            <ol>
+                <li>Implement dedicated rehearsal time for stage blocking for hosts and performers
+                    <ul><li>This includes understanding speaker placement, optimal microphone positioning, and how to avoid creating feedback</li></ul>
+                </li>
+                <li>This is an area where I acknowledge my own expertise is limited (choreography/blocking isn't my strong suit), and dedicated support would be beneficial</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section responsibilities">
+        <h2><span class="emoji">📋</span>3. Understanding the Scope: Key Responsibilities Undertaken</h2>
+        <p>To ensure successful future productions, it's vital to recognize the diverse roles and significant workload involved. For Expressions 6.0, my responsibilities included:</p>
+        
+        <h3>1. Full Sound System Design & Audio Engineering</h3>
+        <ul>
+            <li>Overall system architecture planning</li>
+            <li>Sourcing and provision of all sound equipment (mixers, speakers, microphones, cables)</li>
+            <li>Setup, operation, and live mixing of four distinct audio outputs:
+                <ol>
+                    <li>Main Front-of-House (Audience)</li>
+                    <li>Stage Monitor Mix (Performer Foldback)</li>
+                    <li>Livestream Feed Videographer Feed</li>
+                </ol>
+            </li>
+        </ul>
+
+        <h3>2. Advanced Audio Configuration & Programming</h3>
+        <ul>
+            <li>Pre-programming of microphone settings, music cues, and playback automation for the original show order (rendered unusable by late changes) - controlled by a physical controller that can be controlled by a button</li>
+            <li>Live, manual audio adjustments for all acts due to loss of automation</li>
+            <li>Live troubleshooting of audio issues (e.g., feedback mitigation, level adjustments)</li>
+        </ul>
+
+        <h3>3. Event Program Design & Production</h3>
+        <ul>
+            <li>Full graphical design and layout of the event program</li>
+            <li>Incorporation of last-minute content changes under extreme time pressure</li>
+        </ul>
+
+        <h3>4. Stage Management & Backstage Operations</h3>
+        <ul>
+            <li>Primary adult presence backstage, managing student flow, discipline, and order</li>
+            <li>Providing on-the-spot performance coaching and technical reminders to students</li>
+            <li>Management of all stage equipment (mic stands, mic taping, etc.)</li>
+        </ul>
+
+        <h3>5. Student Production Team Mentorship & Management</h3>
+        <ul>
+            <li>Overseeing and guiding the student intern team responsible for:
+                <ol>
+                    <li>Drone operation and footage capture</li>
+                    <li>Event photography</li>
+                    <li>Spotlight coordination (student-run, separate from Roy)</li>
+                </ol>
+            </li>
+            <li>Weeks of pre-event training for this student team</li>
+        </ul>
+
+        <h3>6. Technical Training & Support</h3>
+        <ul>
+            <li>Providing microphone technique training for performers</li>
+            <li>Managing and troubleshooting event-related wireless connectivity (e.g., hotspot)</li>
+        </ul>
+
+        <h3>7. Choreography & Blocking (Basic Support)</h3>
+        <ul>
+            <li>Assisted with basic choreography elements, though this is an acknowledged area where more specialized support would be beneficial</li>
+        </ul>
+
+        <div class="guiding-principle">
+            <strong>Guiding Principle:</strong> "If everybody does a little, nobody has to do a lot." Clearly defining and distributing these roles among more parent volunteers will be key.
+        </div>
+    </div>
+
+    <div class="section recommendations">
+        <h2><span class="emoji">👥</span>4. I Would Recommend a Production Team Structure</h2>
+        <p>I would recommend that future events have dedicated adult managers for these critical areas:</p>
+
+        <div class="org-chart">
+            <div class="role">
+                <h4>1. Audio Head</h4>
+                <ul>
+                    <li>Sound system design, setup, and live mixing</li>
+                    <li>Equipment sourcing and technical troubleshooting</li>
+                    <li>Microphone management and feedback prevention</li>
+                </ul>
+            </div>
+
+            <div class="role">
+                <h4>2. Video Head</h4>
+                <ul>
+                    <li>Livestream management and camera coordination</li>
+                    <li>Drone operation oversight and footage capture</li>
+                    <li>Video production and post-event editing</li>
+                </ul>
+            </div>
+
+            <div class="role">
+                <h4>3. Visual/Graphics and Materials Head</h4>
+                <ul>
+                    <li>Program design and printing coordination</li>
+                    <li>Stage design and backdrop management</li>
+                    <li>Marketing materials and signage</li>
+                </ul>
+            </div>
+
+            <div class="role">
+                <h4>4. Backstage Manager/Order</h4>
+                <ul>
+                    <li>Student flow management and discipline</li>
+                    <li>Performance order coordination and timing</li>
+                    <li>Equipment organization and setup assistance</li>
+                </ul>
+            </div>
+
+            <div class="role">
+                <h4>5. Performance/Coaching Manager</h4>
+                <ul>
+                    <li>Individual performer coaching and development</li>
+                    <li>Stage blocking and choreography support</li>
+                    <li>Confidence building and performance preparation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="apology">
+        <h2><span class="emoji">💝</span>Moving Forward: An Apology & Exciting Possibilities</h2>
+        <p><strong>To our students,</strong> especially those whose performances were impacted by these technical challenges: I am truly sorry. I invested deeply in each of you, bringing my personal equipment and dedicating weeks to coaching, all with the goal of helping you shine your brightest. It's heartbreaking when external factors prevent that full potential from being realized.</p>
+        
+        <p><strong>To the FTC Leadership,</strong> this recap is offered not to dwell on negatives, but to learn and build, and to more intentionally systematize this production for future years. This speaks to how I believe it unlocks potential - BJ has now performed twice at Yoshi's and it started with expressions as that conduit. I believe in these kids immensely. In that spirit, I'd like to propose ideas to continue celebrating their talents:</p>
+    </div>
+
+    <div class="proposal">
+        <h3><span class="emoji">🎪</span>Future Opportunities</h3>
+        <ol>
+            <li><strong>Carnival Encore Performances:</strong> In past years, select talent show acts have reprised their performances at the school carnival. I would love for AJ, and the 7th Grade Boys, among others, to have this opportunity for a great performance in a different, fun setting.</li>
+            
+            <li><strong>"Expressions Sessions":</strong> BJ and I were talking over the weekend and had an idea. I would like to host a Tiny Desk style performance and shoot a Tiny Desk style video for all vocalists in my home studio, using professional cameras, lighting and audio. I could do that as soon as this week. Everything is all ready to go and the name of it would be Expressions Sessions.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <p>Thank you for your dedication to our school and for considering these points. I am confident that with collaborative planning and clear roles, future events will be even more outstanding.</p>
+        <p><strong>Sincerely,<br>Brian Sullivan</strong></p>
+    </div>
+</body>
+</html>
