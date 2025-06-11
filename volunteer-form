@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Systems Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .form-section h3 {
+            color: #495057;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .success-item,
+        .role-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 2px solid #dee2e6;
+        }
+        
+        .add-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .add-button:hover {
+            background: #218838;
+        }
+        
+        .remove-button {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            float: right;
+        }
+        
+        .generate-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            display: block;
+            margin: 30px auto;
+            font-weight: bold;
+        }
+        
+        .generate-button:hover {
+            opacity: 0.9;
+        }
+        
+        /* Output Styles */
+        .output-container {
+            display: none;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+        }
+        
+        .header p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .success {
+            background: #e0f2f1;
+            border-left: 4px solid #00695c;
+            border-radius: 20px;
+        }
+        
+        .systems {
+            background: #e3f2fd;
+            border-left: 4px solid #1976d2;
+            border-radius: 4px;
+        }
+        
+        .roles {
+            background: #f3e5f5;
+            border-left: 4px solid #7b1fa2;
+            border-radius: 4px;
+        }
+        
+        .optimization {
+            background: linear-gradient(135deg, #e1f5fe 0%, #f3e5f5 100%);
+            border-left: 4px solid #0277bd;
+            border-radius: 8px;
+        }
+        
+        .success-strategy {
+            background-color: #e0f2f1;
+            border-left: 4px solid #00695c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 20px;
+        }
+        
+        .success-label {
+            color: #00695c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .guiding-principle {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        .transformation-story {
+            background: #f3e5f5;
+            border: 2px dashed #9c27b0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .future-role {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f3e5f5 100%);
+            border: 2px solid #4caf50;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .future-role h4 {
+            color: #2e7d32;
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .role-badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+        
+        .quick-wins {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe0b2 100%);
+            border: 2px solid #ffc107;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .quick-wins h3 {
+            color: #f57c00;
+            margin-top: 0;
+        }
+        
+        .vision {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        
+        .print-button {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px;
+        }
+        
+        @media print {
+            .form-container,
+            .print-button {
+                display: none;
+            }
+            
+            .output-container {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Volunteer Systems Generator</h1>
+            <p>Transform your overwhelmed volunteer program into a sustainable success story</p>
+        </div>
+        
+        <div class="form-section">
+            <h3>📋 Basic Information</h3>
+            <label>Program Name:</label>
+            <input type="text" id="programName" placeholder="e.g., Snack Shack, Book Fair, etc.">
+            
+            <label>Your Name:</label>
+            <input type="text" id="authorName" placeholder="Your full name">
+            
+            <label>School/Organization:</label>
+            <input type="text" id="orgName" placeholder="Name of school or organization">
+            
+            <label>Date:</label>
+            <input type="date" id="docDate">
+            
+            <label>Big Picture Summary (2-3 sentences about current state and vision):</label>
+            <textarea id="bigPicture" placeholder="Example: The Snack Shack has become a beloved tradition that provides healthy options and community building. By distributing responsibilities across multiple volunteers, we can ensure no single person burns out while maintaining consistent quality and availability."></textarea>
+        </div>
+        
+        <div class="form-section">
+            <h3>✨ What's Working Well</h3>
+            <div id="successContainer">
+                <div class="success-item">
+                    <label>Success Category:</label>
+                    <input type="text" class="success-category" placeholder="e.g., Community Engagement">
+                    <label>Specific Examples (one per line):</label>
+                    <textarea class="success-examples" placeholder="Students love the healthy options&#10;Parents appreciate the convenience"></textarea>
+                </div>
+            </div>
+            <button class="add-button" onclick="addSuccess()">+ Add Another Success Category</button>
+        </div>
+        
+        <div class="form-section">
+            <h3>🔄 Current Situation</h3>
+            <label>Describe the current workload and opportunity:</label>
+            <textarea id="transformationStory" placeholder="Example: Currently, one dedicated parent manages ordering, inventory, setup, sales, and cleanup for the Snack Shack. By distributing these responsibilities across a team, we can ensure continuity and prevent burnout."></textarea>
+        </div>
+        
+        <div class="form-section">
+            <h3>👥 Recommended Roles</h3>
+            <div id="rolesContainer">
+                <div class="role-item">
+                    <button class="remove-button" onclick="removeRole(this)">Remove</button>
+                    <label>Role Title:</label>
+                    <input type="text" class="role-title" placeholder="e.g., Inventory Manager">
+                    <label>Key Responsibilities (one per line):</label>
+                    <textarea class="role-responsibilities" placeholder="Track inventory levels&#10;Place weekly orders&#10;Manage supplier relationships"></textarea>
+                    <label>Time Commitment:</label>
+                    <input type="text" class="role-time" placeholder="e.g., 2-3 hours per week">
+                    <label>Ideal For:</label>
+                    <input type="text" class="role-ideal" placeholder="e.g., Someone with organizational skills and supplier connections">
+                </div>
+            </div>
+            <button class="add-button" onclick="addRole()">+ Add Another Role</button>
+        </div>
+        
+        <div class="form-section">
+            <h3>📅 Implementation Timeline</h3>
+            <label>Month 1 Activities:</label>
+            <input type="text" id="month1" placeholder="e.g., Recruit core team, establish communication channels">
+            
+            <label>Month 2 Activities:</label>
+            <input type="text" id="month2" placeholder="e.g., Train volunteers, create documentation">
+            
+            <label>Month 3 Activities:</label>
+            <input type="text" id="month3" placeholder="e.g., Launch new structure, gather feedback">
+            
+            <label>Ongoing Activities:</label>
+            <input type="text" id="ongoing" placeholder="e.g., Weekly team check-ins, monthly planning meetings">
+        </div>
+        
+        <div class="form-section">
+            <h3>🎁 Resources Needed</h3>
+            <label>Resource 1 (Name and Description):</label>
+            <textarea id="resource1" placeholder="e.g., 📊 Inventory Management System - Simple spreadsheet or app to track stock levels ($0-50/month)"></textarea>
+            
+            <label>Resource 2 (Name and Description):</label>
+            <textarea id="resource2" placeholder="e.g., 💳 Square Payment System - For easy cashless transactions ($0 + transaction fees)"></textarea>
+            
+            <label>Resource 3 (Name and Description):</label>
+            <textarea id="resource3" placeholder="e.g., 🗂️ Shared Google Drive - For documentation and communication (free)"></textarea>
+        </div>
+        
+        <div class="form-section">
+            <h3>🌟 Vision Points</h3>
+            <label>What this program can become (one vision per line):</label>
+            <textarea id="visionPoints" placeholder="A sustainable operation that runs smoothly year after year&#10;A training ground for student leadership&#10;A model for other school programs&#10;A beloved tradition that brings the community together"></textarea>
+            
+            <label>Inspirational closing (complete the sentence: "When everyone does their part..."):</label>
+            <input type="text" id="inspiringOutcome" placeholder="e.g., healthy snacks and smiling faces become the norm">
+        </div>
+        
+        <button class="generate-button" onclick="generateDocument()">Generate Volunteer Systems Guide</button>
+    </div>
+    
+    <div class="output-container" id="outputContainer">
+        <button class="print-button" onclick="window.print()">Print/Save as PDF</button>
+        <div id="generatedContent"></div>
+    </div>
+    
+    <script>
+        // Set today's date as default
+        document.getElementById('docDate').valueAsDate = new Date();
+        
+        function addSuccess() {
+            const container = document.getElementById('successContainer');
+            const newSuccess = document.createElement('div');
+            newSuccess.className = 'success-item';
+            newSuccess.innerHTML = `
+                <button class="remove-button" onclick="removeSuccess(this)">Remove</button>
+                <label>Success Category:</label>
+                <input type="text" class="success-category" placeholder="e.g., Student Development">
+                <label>Specific Examples (one per line):</label>
+                <textarea class="success-examples" placeholder="Students learn business skills&#10;Leadership opportunities abound"></textarea>
+            `;
+            container.appendChild(newSuccess);
+        }
+        
+        function removeSuccess(button) {
+            button.parentElement.remove();
+        }
+        
+        function addRole() {
+            const container = document.getElementById('rolesContainer');
+            const newRole = document.createElement('div');
+            newRole.className = 'role-item';
+            newRole.innerHTML = `
+                <button class="remove-button" onclick="removeRole(this)">Remove</button>
+                <label>Role Title:</label>
+                <input type="text" class="role-title" placeholder="e.g., Sales Coordinator">
+                <label>Key Responsibilities (one per line):</label>
+                <textarea class="role-responsibilities" placeholder="Manage volunteer schedule&#10;Train sales volunteers&#10;Handle cash reconciliation"></textarea>
+                <label>Time Commitment:</label>
+                <input type="text" class="role-time" placeholder="e.g., 4 hours per week during sales days">
+                <label>Ideal For:</label>
+                <input type="text" class="role-ideal" placeholder="e.g., Someone with retail or customer service experience">
+            `;
+            container.appendChild(newRole);
+        }
+        
+        function removeRole(button) {
+            const roleItems = document.querySelectorAll('.role-item');
+            if (roleItems.length > 1) {
+                button.parentElement.remove();
+            } else {
+                alert('You must have at least one role defined.');
+            }
+        }
+        
+        function generateDocument() {
+            // Gather all form data
+            const programName = document.getElementById('programName').value || '[PROGRAM NAME]';
+            const authorName = document.getElementById('authorName').value || '[YOUR NAME]';
+            const orgName = document.getElementById('orgName').value || '[ORGANIZATION]';
+            const docDate = document.getElementById('docDate').value || new Date().toLocaleDateString();
+            const bigPicture = document.getElementById('bigPicture').value || '[BIG PICTURE SUMMARY]';
+            const transformationStory = document.getElementById('transformationStory').value || '[TRANSFORMATION STORY]';
+            
+            // Gather successes
+            let successesHTML = '';
+            const successItems = document.querySelectorAll('.success-item');
+            successItems.forEach((item, index) => {
+                const category = item.querySelector('.success-category').value || `Success Category ${index + 1}`;
+                const examples = item.querySelector('.success-examples').value.split('\n').filter(e => e.trim());
+                
+                successesHTML += `
+                <div class="success-strategy">
+                    <div class="success-label">${index === 0 ? '🎯' : '👥'} ${category}</div>
+                    <ul>
+                        ${examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                </div>`;
+            });
+            
+            // Gather roles
+            let rolesHTML = '';
+            const roleItems = document.querySelectorAll('.role-item');
+            roleItems.forEach((item, index) => {
+                const title = item.querySelector('.role-title').value || `Role ${index + 1}`;
+                const responsibilities = item.querySelector('.role-responsibilities').value.split('\n').filter(r => r.trim());
+                const time = item.querySelector('.role-time').value || 'Time commitment TBD';
+                const ideal = item.querySelector('.role-ideal').value || 'Volunteer with relevant skills';
+                
+                rolesHTML += `
+                <div class="future-role">
+                    <h4>${index + 1}. ${title} <span class="role-badge">Parent Volunteer</span></h4>
+                    <p><strong>Primary Responsibilities:</strong></p>
+                    <ul>
+                        ${responsibilities.map(r => `<li>${r}</li>`).join('')}
+                    </ul>
+                    <p><strong>Time Commitment:</strong> ${time}</p>
+                    <p><strong>Ideal for:</strong> ${ideal}</p>
+                </div>`;
+            });
+            
+            // Gather timeline
+            const month1 = document.getElementById('month1').value || 'Planning activities';
+            const month2 = document.getElementById('month2').value || 'Implementation activities';
+            const month3 = document.getElementById('month3').value || 'Launch activities';
+            const ongoing = document.getElementById('ongoing').value || 'Maintenance activities';
+            
+            // Gather resources
+            const resource1 = document.getElementById('resource1').value || '';
+            const resource2 = document.getElementById('resource2').value || '';
+            const resource3 = document.getElementById('resource3').value || '';
+            
+            let resourcesHTML = '';
+            [resource1, resource2, resource3].forEach(resource => {
+                if (resource) {
+                    resourcesHTML += `<p><strong>${resource}</strong></p>`;
+                }
+            });
+            
+            // Gather vision
+            const visionPoints = document.getElementById('visionPoints').value.split('\n').filter(v => v.trim());
+            const inspiringOutcome = document.getElementById('inspiringOutcome').value || 'success happens';
+            
+            // Generate the document
+            const outputHTML = `
+            <div class="header">
+                <h1>${programName}: Systems Guide for Sustainable Volunteer Operations</h1>
+                <p><strong>For:</strong> ${orgName} Leadership and future volunteers</p>
+                <p><strong>From:</strong> ${authorName}</p>
+                <p><strong>Date:</strong> ${docDate}</p>
+                <p style="margin-top: 15px; font-style: italic;">A blueprint for sustainable excellence through distributed responsibility</p>
+            </div>
+
+            <div class="section">
+                <p><strong>What's inside:</strong> This guide captures both the successes and challenges of ${programName} while providing a clear roadmap for creating sustainable operations through distributed volunteer responsibilities.</p>
+            </div>
+
+            <div class="quick-wins">
+                <h3>🎯 The Big Picture</h3>
+                <p>${bigPicture}</p>
+            </div>
+
+            <div class="section success">
+                <h2><span class="emoji">✨</span>WHAT'S WORKING WELL</h2>
+                ${successesHTML}
+            </div>
+
+            <div class="transformation-story">
+                <h3>The Transformation Opportunity</h3>
+                <p><em>"If everybody does a little, nobody has to do a lot."</em></p>
+                <p>${transformationStory}</p>
+            </div>
+
+            <div class="section roles">
+                <h2><span class="emoji">🚀</span>RECOMMENDED TEAM STRUCTURE</h2>
+                
+                <div class="guiding-principle">
+                    <strong>Core Principle:</strong> Clear roles + defined responsibilities = sustainable success
+                </div>
+
+                ${rolesHTML}
+            </div>
+
+            <div class="section optimization">
+                <h2><span class="emoji">📅</span>IMPLEMENTATION TIMELINE</h2>
+                
+                <p><strong>Month 1:</strong> ${month1}</p>
+                <p><strong>Month 2:</strong> ${month2}</p>
+                <p><strong>Month 3:</strong> ${month3}</p>
+                <p><strong>Ongoing:</strong> ${ongoing}</p>
+            </div>
+
+            <div class="section">
+                <h2><span class="emoji">🎁</span>RESOURCES NEEDED</h2>
+                <p><em>Tools and systems that would enhance operations:</em></p>
+                ${resourcesHTML}
+            </div>
+
+            <div class="vision">
+                <h2><span class="emoji">🌟</span>LOOKING FORWARD</h2>
+                <p>With distributed responsibilities, ${programName} can become:</p>
+                <ul>
+                    ${visionPoints.map(point => `<li>${point}</li>`).join('')}
+                </ul>
+                <p style="text-align: center; font-size: 1.2em; margin-top: 20px;"><strong>"When everyone does their part, ${inspiringOutcome}."</strong></p>
+            </div>
+
+            <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h2 style="border-bottom: none; text-align: center;">Ready to Build a Stronger ${programName}?</h2>
+                <p style="text-align: center; font-size: 1.1em;">Share this guide with potential volunteers and watch the transformation begin!</p>
+            </div>`;
+            
+            // Show the output
+            document.getElementById('generatedContent').innerHTML = outputHTML;
+            document.querySelector('.form-container').style.display = 'none';
+            document.getElementById('outputContainer').style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
