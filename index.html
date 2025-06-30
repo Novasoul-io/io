@@ -3,410 +3,896 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IO Soul Sounds - Official Website | IO Soul & Sonny Soul</title>
-    <meta name="description" content="IO Soul Sounds - The artistic convergence of Brian Sullivan (IO Soul) and his son (Sonny Soul). Bridging genres from R&B to EDM, creating a lifelong quest to weave the harmonics of life.">
-    <meta name="keywords" content="IO Soul, Sonny Soul, IO Soul Sounds, Brian Sullivan, music, R&B, EDM, stadium performance, souls and son">
-    <meta property="og:title" content="IO Soul Sounds - Official Website">
-    <meta property="og:description" content="Experience the artistic convergence of IO Soul and Sonny Soul. Stadium performance coming soon!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://iosoulmusic.com">
-    
+    <title>Expressions 6.0: Systems Guide for High-Quality Event Production</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        /* Import elegant fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
-        
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #000;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 20px 0;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
         }
         
-        .logo {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2em;
+        }
+        
+        .header p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .success {
+            background: #e0f2f1;
+            border-left: 4px solid #00695c;
+            border-radius: 20px;
+        }
+        
+        .systems {
+            background: #e3f2fd;
+            border-left: 4px solid #1976d2;
+            border-radius: 4px;
+        }
+        
+        .roles {
+            background: #f3e5f5;
+            border-left: 4px solid #7b1fa2;
+            border-radius: 4px;
+        }
+        
+        .optimization {
+            background: linear-gradient(135deg, #e1f5fe 0%, #f3e5f5 100%);
+            border-left: 4px solid #0277bd;
+            border-radius: 8px;
+        }
+        
+        .success-strategy {
+            background-color: #e0f2f1;
+            border-left: 4px solid #00695c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 20px;
+        }
+        
+        .success-label {
+            color: #00695c;
             font-weight: bold;
+            font-size: 1.1em;
         }
         
-        .nav-links {
+        .role-def {
+            background-color: #f3e5f5;
+            border-left: 4px solid #7b1fa2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .role-label {
+            color: #7b1fa2;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .guiding-principle {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        
+        .vision {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #00bcd4;
+        }
+        
+        .apology {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #e91e63;
+        }
+        
+        .org-chart {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px solid #dee2e6;
+        }
+        
+        .role {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #6c757d;
+        }
+        
+        .role h4 {
+            margin-top: 0;
+            color: #495057;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 10px 0;
+        }
+        
+        .image-container-wrapper {
             display: flex;
-            gap: 30px;
-            list-style: none;
+            flex-direction: column;
+            gap: 20px;
         }
-        
-        .nav-links a {
-            color: #FFD700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-        
-        .nav-links a:hover {
-            color: #FFA500;
-            transform: translateY(-2px);
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1), transparent),
-                        linear-gradient(180deg, #000 0%, #1a1a1a 100%);
+
+        .image-card {
+            border: 2px solid;
+            border-radius: 5px;
+            padding: 10px;
+            background: white;
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
-            overflow: hidden;
         }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="gold" opacity="0.3"/></svg>');
-            background-size: 100px 100px;
-            animation: sparkle 20s linear infinite;
-        }
-        
-        @keyframes sparkle {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-50px, -50px); }
-        }
-        
-        .hero-content {
-            text-align: center;
-            z-index: 1;
-        }
-        
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 5rem;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            animation: glow 2s ease-in-out infinite alternate;
-            letter-spacing: 3px;
-        }
-        
-        @keyframes glow {
-            from { text-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
-            to { text-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 165, 0, 0.6); }
-        }
-        
-        .subtitle {
-            font-size: 1.5rem;
-            color: #FFD700;
-            margin-bottom: 30px;
-        }
-        
-        .stadium-alert {
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            color: #000;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            animation: pulse 2s infinite;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        /* About Section */
-        .about {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .about-text {
-            background: rgba(255, 215, 0, 0.05);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 215, 0, 0.2);
-        }
-        
-        .about h2 {
-            font-size: 3rem;
-            color: #FFD700;
-            margin-bottom: 30px;
-        }
-        
-        .about p {
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: #ccc;
-        }
-        
-        .about-image {
+
+        .image-card img {
             width: 100%;
-            height: 500px;
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.2));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: #FFD700;
+            height: auto;
+            border-radius: 3px;
+            object-fit: contain;
         }
-        
-        /* Meet Section */
-        .meet {
-            padding: 100px 20px;
-            background: #0a0a0a;
+
+        .image-card p {
+            font-size: 0.9em;
+            color: #666;
+            margin: 10px 0 5px 0;
         }
-        
-        .meet h2 {
-            text-align: center;
-            font-size: 3rem;
-            color: #FFD700;
-            margin-bottom: 60px;
+
+        .current-scope {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
         }
-        
-        .artists {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            max-width: 1000px;
-            margin: 0 auto;
+
+        .current-scope h3 {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 0;
         }
-        
-        .artist-card {
-            background: rgba(255, 215, 0, 0.05);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            transition: transform 0.3s ease;
+
+        .scope-list {
+            columns: 2;
+            column-gap: 30px;
+            font-size: 0.95em;
         }
-        
-        .artist-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+
+        .scope-list li {
+            break-inside: avoid;
+            margin: 5px 0;
         }
-        
-        .artist-card h3 {
-            font-size: 2rem;
-            color: #FFD700;
-            margin-bottom: 20px;
-        }
-        
-        .artist-card p {
-            color: #ccc;
-            line-height: 1.6;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 100px 20px;
-            text-align: center;
-        }
-        
-        .contact h2 {
-            font-size: 3rem;
-            color: #FFD700;
-            margin-bottom: 30px;
-        }
-        
-        .contact-info {
-            font-size: 1.2rem;
-            color: #ccc;
-            margin-bottom: 40px;
-        }
-        
-        .contact-info a {
-            color: #FFD700;
-            text-decoration: none;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
+
+        .future-roles {
             margin-top: 30px;
         }
-        
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #000;
+
+        .future-role {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f3e5f5 100%);
+            border: 2px solid #4caf50;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .future-role h4 {
+            color: #2e7d32;
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .role-badge {
+            display: inline-block;
+            background: #4caf50;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+
+        .critical-issue {
+            background: #f5f5f5;
+            border: 2px solid #9e9e9e;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .issue-header {
+            color: #424242;
             font-weight: bold;
-            text-decoration: none;
-            transition: transform 0.3s ease;
+            font-size: 1.2em;
+            margin-bottom: 15px;
         }
-        
-        .social-links a:hover {
-            transform: scale(1.2) rotate(360deg);
+
+        .problem-box {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
-        
-        /* Footer */
-        footer {
-            background: #000;
-            padding: 30px;
+
+        .problem-header {
+            color: #c62828;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .root-cause-box {
+            background: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .root-cause-header {
+            color: #f57f17;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .solution-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .solution-header {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .quick-wins {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe0b2 100%);
+            border: 2px solid #ffc107;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .quick-wins h3 {
+            color: #f57c00;
+            margin-top: 0;
+        }
+
+        .transformation-story {
+            background: #f3e5f5;
+            border: 2px dashed #9c27b0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
             text-align: center;
-            border-top: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .transformation-story h3 {
+            color: #6a1b9a;
+            margin-top: 0;
+        }
+
+        .summary-card {
+            background: white;
+            border: 2px solid #dee2e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .summary-card h4 {
+            color: #495057;
+            margin-top: 0;
         }
         
-        footer p {
-            color: #666;
+        .timeline-item {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
         }
         
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-            
-            .about-grid,
-            .artists {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                display: none;
-            }
+        .timeline-item h4 {
+            color: #2e7d32;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .timeline-item ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .timeline-item li {
+            margin: 5px 0;
+        }
+        
+        .comm-protocols {
+            background: #f3e5f5;
+            border: 2px solid #9c27b0;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .equipment-rec {
+            background: linear-gradient(135deg, #e1f5fe 0%, #e8f5e9 100%);
+        }
+        
+        .equipment-item {
+            background: white;
+            border: 2px solid #4caf50;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        
+        .equipment-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .equipment-item h4 {
+            color: #2e7d32;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .equipment-item p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">IO</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#artists">Artists</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <div class="header">
+        <h1>Expressions 6.0: Systems Guide for High-Quality Event Production</h1>
+        <p><strong>For:</strong> FTC Leadership and future planning committees</p>
+        <p><strong>From:</strong> Brian Sullivan</p>
+        <p><strong>Date:</strong> June 3, 2025</p>
+        <p style="margin-top: 15px; font-style: italic;">A blueprint for operational excellence in school productions</p>
+    </div>
+
+    <div class="section">
+        <p><strong>What's inside:</strong> This guide captures the incredible successes of Expressions 6.0 while providing a roadmap for making future shows even more spectacular. It includes what made this year special, lessons learned from technical challenges, and a clear framework for distributing responsibilities to create sustainable excellence.</p>
+    </div>
+
+    <div class="quick-wins">
+        <h3>🎯 The Big Picture: From Good to Extraordinary</h3>
+        <p>Expressions 6.0 proved that with dedication and innovation, a school talent show can rival professional productions. By expanding from 2 to 4 rehearsals per week and implementing professional-grade technical systems, we created an experience that left audiences amazed. The path forward? <strong>Distribute responsibilities across more hands to make excellence sustainable.</strong></p>
+    </div>
+
+    <div class="section success">
+        <h2><span class="emoji">✨</span>WHAT MADE EXPRESSIONS 6.0 SPECIAL</h2>
+
+        <div class="success-strategy">
+            <div class="success-label">🎯 Enhanced Rehearsal Effectiveness</div>
+            <ul>
+                <li>Hosting rehearsals four days a week (up from two previously) for three weeks allowed significantly more hands-on coaching and development time with students</li>
+                <li>The shift from having all kids at one rehearsal to smaller groupings of kids at rehearsal was an intentional change this year, and that was definitely a success</li>
             </ul>
-        </nav>
-    </header>
-    
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>IO SOUL SOUNDS</h1>
-            <p class="subtitle">The Artistic Convergence of IO Soul & Sonny Soul</p>
-            <p style="font-family: 'Playfair Display', serif; font-size: 2rem; color: #FFD700; margin: 20px 0;">~ Souls & Son ~</p>
-            <div class="stadium-alert">🎵 STADIUM PERFORMANCE - COMING SOON! 🎵</div>
         </div>
-    </section>
-    
-    <section id="about" class="about">
-        <div class="about-grid">
-            <div class="about-text">
-                <h2>About IO Soul</h2>
-                <p>IO SOUL is the artistic convergence of Brian, a melody maestro whose soul resonates at the crossroads of technology, legacy, and identity. The moniker resonates on three profound levels: it's a nod to the digital imprint carried forward with rePenertise, a tribute to the surname 'Sullivan'—affectionately morphed from 'Soul' to 'Soule' over time—and an homage to the authentic genre's creditor to whom he's forever indebted.</p>
-                <p>IO SOUL embodies a lifelong quest to weave and harmonize the threads of life, an endeavor that bridges the gaps between discord and melody. For Brian, soul music transcends genre—it's a sanctuary, a testament to the rhythms of life, family, and art. It's a narrative woven from the threads of his name, his passion, and his lineage, symbolizing not just a bridge but a declaration where two poles meet, questions find answers, and music becomes salvation.</p>
+
+        <div class="success-strategy">
+            <div class="success-label">👥 Student Engagement & Responsibility</div>
+            <ul>
+                <li>Older students (7th/8th graders) took initiative in helping load and unload heavy equipment (speakers, mics, mixer) daily from vehicles</li>
+                <li>These older students also responsibly escorted younger students back to aftercare, allowing adults to move on to next production tasks</li>
+            </ul>
+        </div>
+
+        <div class="success-strategy">
+            <div class="success-label">🎭 Enhanced Student Preparedness & Confidence</div>
+            <ul>
+                <li>Consistent coaching on "If you're prepared, you won't be scared" messaging resonated strongly with performers</li>
+                <li>Increased practice, mind-muscle connection work, and visualization led to kids being really mature, more confident performers this year compared to last</li>
+            </ul>
+        </div>
+
+        <div class="success-strategy">
+            <div class="success-label">🤝 Stronger Student Camaraderie</div>
+            <ul>
+                <li>A positive culture and stronger sense of camaraderie among the student performers was evident, beautifully reflected in the final song</li>
+            </ul>
+        </div>
+
+        <div class="success-strategy">
+            <div class="success-label">🎵 Advanced Technical Innovation</div>
+            <ul>
+                <li>Successfully implemented a sophisticated four-output audio system (Main FOH, Stage Monitors, Livestream Feed, Videographer Feed) that provided professional-grade sound management</li>
+                <li>Pre-programmed automation system with physical controller allowing non-technical personnel to operate complex audio transitions with single button presses</li>
+                <li>Integration of student-operated drone footage captured overhead documentation that proved invaluable for operational analysis</li>
+            </ul>
+        </div>
+
+        <div class="success-strategy">
+            <div class="success-label">🎬 Student Production Team Initiative</div>
+            <ul>
+                <li>A student intern team was established, with names featured on the back of the program. These students showed great interest and dedication in learning and executing their roles in drone operation, photography, and spotlighting</li>
+                <li>This indicates strong potential for a student intern program, maybe connected to after school enrichments. It's a natural conduit for kids who are interested in the more behind the scenes aspects of things</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="transformation-story">
+        <h3>The Transformation Opportunity</h3>
+        <p><em>"If everybody does a little, nobody has to do a lot."</em></p>
+        <p>The comprehensive production requirements for Expressions 6.0 highlight the opportunity to distribute responsibilities across a dedicated team for future shows.</p>
+    </div>
+
+    <div class="section roles">
+        <h2><span class="emoji">🚀</span>THE FUTURE: Recommended Team Structure</h2>
+        
+        <div class="current-scope">
+            <h3>Expressions 6.0 Production Scope</h3>
+            <p><em>The following areas represent the comprehensive technical and artistic requirements for producing Expressions. Future productions would benefit from distributing these across specialized roles.</em></p>
+            <ul class="scope-list">
+                <li>🎵 Sound system design & audio engineering</li>
+                <li>⚙️ Automation programming & live mixing</li>
+                <li>🎨 Event program design & production</li>
+                <li>🎭 Stage management & backstage operations</li>
+                <li>🎬 Student production team mentorship</li>
+                <li>🔧 Technical training & equipment management</li>
+                <li>💃 Choreography & performance coaching</li>
+                <li>📦 Equipment logistics & setup</li>
+                <li>🎤 Microphone technique training</li>
+                <li>👥 Student flow management</li>
+                <li>🔌 Power distribution planning</li>
+                <li>📹 Video & livestream coordination</li>
+            </ul>
+        </div>
+
+        <div class="future-roles">
+            <h3 style="font-size: 1.5em; color: #2e7d32; text-align: center; margin: 30px 0;">✨ Recommended 8-Role Team Structure ✨</h3>
+            
+            <div class="summary-card">
+                <h4>Quick Overview: Essential Production Roles</h4>
+                <ol>
+                    <li><strong>Audio Manager / Technical Lead</strong> - Sound system expert (PTA Volunteer)</li>
+                    <li><strong>Video Production Manager</strong> - Recording & documentation lead (PTA Volunteer)</li>
+                    <li><strong>Visual Design & Multimedia Coordinator</strong> - Programs & visuals (Teacher/PTA collaboration with Ms. Dana)</li>
+                    <li><strong>Stage & Backstage Manager</strong> - Student flow coordinator (Teacher recommended - Dean would be ideal)</li>
+                    <li><strong>Performance Coach & Choreographer</strong> - Artistic development (Parent Volunteer)</li>
+                    <li><strong>Technical Infrastructure Lead</strong> - Equipment & power management (PTA Volunteer)</li>
+                    <li><strong>Student Intern Program Coordinator</strong> - Youth tech team leader (Teacher/Parent)</li>
+                    <li><strong>Show Director</strong> - Overall artistic vision (Parent Volunteer)</li>
+                </ol>
             </div>
-            <div class="about-image">
-                [Artist Photo Placeholder]
+            
+            <div class="future-role">
+                <h4>1. Audio Manager / Technical Lead <span class="role-badge">PTA Volunteer</span></h4>
+                <p><strong>Primary Responsibilities:</strong></p>
+                <ul>
+                    <li>Complete sound system design and setup</li>
+                    <li>Live mixing during the show</li>
+                    <li>Microphone management and troubleshooting</li>
+                    <li>Pre-show sound checks and automation programming</li>
+                    <li>Venue power mapping and distribution planning (simple checklist/diagram)</li>
+                </ul>
+                <p><em>Note: This role could absorb Technical Infrastructure responsibilities given overlap</em></p>
+                <p><strong>Time Commitment:</strong> 3 weeks pre-show (10 hours/week) + show week (20 hours)</p>
+                <p><strong>Ideal for:</strong> Parent with audio engineering experience or strong technical background</p>
+            </div>
+
+            <div class="future-role">
+                <h4>2. Video Production Manager <span class="role-badge">PTA Volunteer</span></h4>
+                <p><strong>Primary Responsibilities:</strong></p>
+                <ul>
+                    <li>Professional recording of the entire performance (primary focus)</li>
+                    <li>Camera positioning and operation coordination</li>
+                    <li>Student drone team supervision and safety</li>
+                    <li>Photography team coordination</li>
+                    <li>Post-event video editing and distribution</li>
+                    <li>Livestream setup (if resources allow)</li>
+                </ul>
+                <p><strong>Time Commitment:</strong> 2 weeks pre-show (5 hours/week) + show week (15 hours)</p>
+                <p><strong>Ideal for:</strong> Parent with video production or photography passion</p>
+            </div>
+
+            <div class="future-role">
+                <h4>3. Visual Design & Multimedia Coordinator <span class="role-badge">Teacher/PTA Collaboration</span></h4>
+                <p><strong>Primary Responsibilities:</strong></p>
+                <ul>
+                    <li>Event program design and production</li>
+                    <li>Marketing materials and social media graphics</li>
+                    <li>Visual art program coordination (supporting Ms. Dana's existing program)</li>
+                    <li>Future enhancement: If projection equipment becomes available, prepare content for pre-show displays</li>
+                </ul>
+                <p><strong>Time Commitment:</strong> 4 weeks pre-show (5 hours/week)</p>
+                <p><strong>Ideal for:</strong> Creative parent collaborating with Ms. Dana</p>
+            </div>
+
+            <div class="future-role">
+                <h4>4. Stage & Backstage Manager <span class="role-badge">Teacher Recommended</span></h4>
+                <p><strong>Primary Responsibilities:</strong></p>
+                <ul>
+                    <li>Student check-in and performance order management</li>
+                    <li>Backstage supervision and safety</li>
+                    <li>Prop and costume coordination</li>
+                    <li>Microphone distribution to performers</li>
+                    <li>Curtain management for lighting effects</li>
+                </ul>
+                <p><em>Note: This role would benefit from a teacher's authority - the Dean would be ideal</em></p>
+                <p><strong>Time Commitment:</strong> Final week rehearsals (10 hours) + show day (8 hours)</p>
+                <p><strong>Ideal for:</strong> Organized teacher who excels at logistics</p>
+            </div>
+
+            <div class="future-role">
+                <h4>5. Performance Coach & Choreographer <span class="role-badge">Parent Volunteer</span></h4>
+                <p><strong>Primary Responsibilities:</strong></p>
+                <ul>
+                    <li>Individual and group performance coaching</li>
+                    <li>Stage presence and microphone technique training</li>
+                    <li>Choreography development</li>
+                    <li>Performance anxiety management</li>
+                </ul>
+                <p><strong>Time Commitment:</strong> 3 weeks rehearsals (12 hours/week)</p>
+                <p><strong>Ideal for:</strong> Parent with performance or dance background</p>
+            </div>
+
+            <div class="future-role">
+                <h4>6. Technical Infrastructure Lead <span class="role-badge">PTA Volunteer</span></h4>
+                <p><strong>Primary Responsibilities:</strong></p>
+                <ul>
+                    <li>Equipment transportation and security</li>
+                    <li>Power distribution verification</li>
+                    <li>Load-in/load-out crew coordination</li>
+                    <li>Safety protocols and cable management</li>
+                </ul>
+                <p><em>Note: Could be combined with Audio Manager role</em></p>
+                <p><strong>Time Commitment:</strong> Tech week (10 hours) + show day (5 hours)</p>
+                <p><strong>Ideal for:</strong> Parent with event production experience</p>
+            </div>
+
+            <div class="future-role">
+                <h4>7. Student Intern Program Coordinator <span class="role-badge">Teacher/Parent Team</span></h4>
+                <p><strong>Primary Responsibilities:</strong></p>
+                <ul>
+                    <li>Recruit and train student tech team</li>
+                    <li>Supervise drone, lighting, and photo crews</li>
+                    <li>Create learning objectives</li>
+                    <li>Potential year-round enrichment program connection*</li>
+                </ul>
+                <p><em>*This could potentially connect with after-school enrichment programs, providing a natural pathway for students interested in technical production (pending school approval and exploration)</em></p>
+                <p><strong>Time Commitment:</strong> 4 weeks pre-show (5 hours/week)</p>
+                <p><strong>Ideal for:</strong> Teacher passionate about technical arts education</p>
+            </div>
+
+            <div class="future-role">
+                <h4>8. Show Director <span class="role-badge">Parent Volunteer</span></h4>
+                <p><strong>Primary Responsibilities:</strong></p>
+                <ul>
+                    <li>Overall artistic vision and theme</li>
+                    <li>Act selection and audition coordination</li>
+                    <li>Host/MC scripting</li>
+                    <li>Final creative decisions</li>
+                    <li><strong>Critical: Commits to 48-hour program finalization deadline</strong></li>
+                </ul>
+                <p><strong>Time Commitment:</strong> 6 weeks (varying hours)</p>
+                <p><strong>Ideal for:</strong> Parent with production experience and creative vision</p>
             </div>
         </div>
-    </section>
-    
-    <section id="artists" class="meet">
-        <h2>Meet Souls & Son</h2>
-        <div class="artists">
-            <div class="artist-card">
-                <h3>IO Soul</h3>
-                <p>In the rhythm of life, they found their Beat. Brian Jr. represents an ensemble where tradition and sound collide in a harmonic duo. IO Soul meets the fresh spirit of the new generation—their music is more than a family business; it's an artistic family union. From folk melodies to the electronic beats, their songs are a dialogue of emotions, a dance of words and tunes that bridges ages and eras.</p>
+    </div>
+
+    <div class="section optimization">
+        <h2><span class="emoji">📅</span>PRODUCTION TIMELINE</h2>
+        
+        <p><strong>3 Months Before:</strong> Recruit volunteer team (8 roles) • Kickoff meeting • Set protocols</p>
+        <p><strong>2 Months Before:</strong> Venue power mapping • Equipment inventory • Budget planning</p>
+        <p><strong>6 Weeks Before:</strong> Auditions & act selection • Weekly meetings begin</p>
+        <p><strong>3 Weeks Before:</strong> 4x weekly rehearsals start • Student tech training</p>
+        <p><strong>48 Hours Before:</strong> FINAL content deadline • Program printing</p>
+        <p><strong>Show Day:</strong> 2-hour setup minimum • Full sound check • Team celebration!</p>
+        
+        <div class="comm-protocols">
+            <p><strong>Communication Protocols:</strong> Weekly meetings (6 weeks out) • Shared calendar • Clear escalation path • Role matrix • Post-show debrief with Director</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><span class="emoji">🎁</span>EQUIPMENT RECOMMENDATIONS</h2>
+        <p><em>Smart investments that would transform production quality:</em></p>
+        
+        <p><strong>🎤 Professional Wireless Microphone System</strong> (4-8 channels • $800-2,000)<br>
+        Enable seamless group performances and stronger connections between performers* <br>
+        <em>*Currently using 4+ separate systems that each require their own overhead and management</em></p>
+        
+        <p><strong>📽️ Portable Screen</strong> ($200-300)<br>
+        The school has projectors but needs a portable screen for flexible placement</p>
+        
+        <p><strong>🔋 Portable Power Station</strong> ($250)<br>
+        Enable mobile projection cart that can be positioned anywhere in the venue</p>
+        
+        <p><strong>📡 Walkie-Talkie System</strong> ($200)<br>
+        4-channel system for discreet communication that both kids and adults can use</p>
+    </div>
+
+    <div class="vision">
+        <h2><span class="emoji">🌟</span>WHERE WE CAN GO</h2>
+        <p>Expressions has the potential to become a signature event that showcases not just student talent, but also the school's commitment to arts education and technical excellence. By distributing responsibilities across a dedicated team of volunteers and staff, we can:</p>
+        <ul>
+            <li>Create a sustainable model that doesn't burn out key contributors</li>
+            <li>Provide learning opportunities for students interested in technical production</li>
+            <li>Elevate the production quality to rival professional venues</li>
+            <li>Build a stronger sense of community through collaborative effort</li>
+            <li>Establish Expressions as a beloved tradition that students anticipate all year</li>
+        </ul>
+        <p><strong>The key is clear role definition, adequate planning time, and a commitment to the established protocols and deadlines. When everyone does their part, magic happens on stage.</strong></p>
+    </div>
+
+    <div class="section systems">
+        <h2><span class="emoji">📚</span>APPENDIX: Learning from Challenges</h2>
+        <p><em>For those interested in the technical details, here are the key operational challenges from Expressions 6.0 and their solutions. These informed the role distributions above.</em></p>
+
+        <details style="margin: 15px 0;">
+            <summary style="cursor: pointer; font-weight: bold; color: #1976d2;">Click to expand technical issues and solutions</summary>
+            
+            <p style="margin: 15px 0;">These grows highlight opportunities to evolve from a consolidated decision-making model to a distributed leadership structure. The issues below demonstrate how concentrating multiple critical decisions in any single role—regardless of the individual—can create operational bottlenecks and compound technical challenges. The solutions focus on distributing decision-making authority across specialized roles to improve both efficiency and outcomes.</p>
+            
+            <div class="critical-issue" style="margin-top: 15px;">
+                <div class="issue-header">Issue 1: Primary Speaker Unplugged</div>
+                
+                <div class="problem-box">
+                    <div class="problem-header">🚨 WHAT HAPPENED</div>
+                    <p>Early in the show (during early vocal performances including AJ's and Journey's), the entire right-side main speaker was unplugged by parent volunteer for more than half the performance</p>
+                    
+                    <p><strong>System Impact:</strong></p>
+                    <ul>
+                        <li>The overall mix was completely imbalanced, and to the audience this sounded like low volume of the vocals</li>
+                        <li>This was not a "mic too low" issue but a complete loss of sound output from one side</li>
+                        <li>This issue was identified and rectified by Steve much later, around the time the middle school acts began</li>
+                        <li>This is why later acts generally sounded louder and fuller</li>
+                    </ul>
+                </div>
+                
+                <div class="root-cause-box">
+                    <div class="root-cause-header">⚠️ ROOT CAUSE</div>
+                    <p>It was the cinematography volunteer's first year. The team was introduced for cinematography work with giant spotlights (new for this year). When they were doing power shifting, their equipment needed an outlet that led to powering off the speaker and they accidentally forgot to plug the speaker back on.</p>
+                </div>
+                
+                <div class="solution-box">
+                    <div class="solution-header">✅ SOLUTION: Venue Power Mapping & Technical Infrastructure</div>
+                    <ol>
+                        <li>Create a detailed venue wiring map in advance, documenting all available power sources (noting the single backstage plug and four front-stage plugs)</li>
+                        <li>Designate a single, technically knowledgeable point person (Audio Manager role) solely responsible for ALL power distribution and audio/lighting connections</li>
+                        <li>No other individuals should adjust or unplug critical equipment without direct confirmation from the Audio Manager</li>
+                        <li>Conduct a full system sound check immediately before doors open and after any changes to power or connections are made</li>
+                        <li>An intermission provides a crucial window to diagnose and fix critical issues when they arise</li>
+                    </ol>
+                </div>
             </div>
-            <div class="artist-card">
-                <h3>Sonny Soul</h3>
-                <p>As a duo, Brian and his son (Sonny Soul) now soundscape that celebrates life's journey and the connections that music can forge. Every performance is an opportunity to weave new stories together, where past meets memory, and every song is a footprint on their shared path.</p>
+
+            <div class="critical-issue">
+                <div class="issue-header">Issue 2: Late Program Order Finalization</div>
+                
+                <div class="problem-box">
+                    <div class="problem-header">🚨 WHAT HAPPENED</div>
+                    <p>The graphical event program order, initially agreed upon Tuesday, underwent significant revisions. Despite consistent requests for updates, the final order was not confirmed by the show director until 3:00 PM on Friday (event day)</p>
+                    
+                    <p><strong>System Impact:</strong></p>
+                    <ul>
+                        <li><strong>Graphics Redesign Rush:</strong> Left only one hour to completely redesign the graphical program, incorporate new information, finalize the layout, and deliver to Molly for printing</li>
+                        <li><strong>Delayed Arrival & Critically Shortened Soundcheck:</strong> Arrival at 5:00 PM allowed minimal time for soundcheck, critically impacting the 7th Grade Boys who had missed that week's soundcheck and dress rehearsal</li>
+                        <li><strong>Loss of Show Automation:</strong> Many hours invested pre-programming all microphone settings, music cues, and lighting notes became unusable due to complete reordering</li>
+                        <li><strong>Compromised Backstage Role:</strong> The shift to 100% manual audio mixing meant being physically tied to the soundboard, limiting backstage coaching and student management</li>
+                    </ul>
+                </div>
+                
+                <div class="root-cause-box">
+                    <div class="root-cause-header">⚠️ ROOT CAUSE</div>
+                    <p>The current production system consolidates program finalization decisions into a single approval point. While this ensures artistic vision, it can create bottlenecks when that individual is managing multiple competing priorities during show week. Multiple revision requests were made throughout the week, but the centralized decision-making process led to last-minute finalization on event day.</p>
+                </div>
+                
+                <div class="solution-box">
+                    <div class="solution-header">✅ SOLUTION: 48-Hour Content Deadline</div>
+                    <ol>
+                        <li>Implement a strict 48-hour (or earlier) pre-event deadline for ALL program content and order finalization</li>
+                        <li>Any changes after this deadline must be by collective agreement of a core event leadership team</li>
+                        <li>Consider scheduling the overall event arc 2–3 months in advance to minimize conflicts</li>
+                    </ol>
+                </div>
             </div>
+
+            <div class="critical-issue">
+                <div class="issue-header">Issue 3: Live Event Deviations</div>
+                
+                <div class="problem-box">
+                    <div class="problem-header">🚨 WHAT HAPPENED</div>
+                    <ol>
+                        <li>There was a planned intermission that was crucial for technical resets and was on the program. This intermission was cancelled by the host on stage</li>
+                        <li>A real-time decision was made for the 7th Grade Boys to perform immediately after Adanya's "Hallelujah," deviating from the revised program</li>
+                    </ol>
+                    
+                    <p><strong>System Impact:</strong></p>
+                    <ul>
+                        <li><strong>Loss of Critical Reset Window:</strong> Cancelling the intermission eliminated the only planned opportunity to address technical issues</li>
+                        <li><strong>Missed Announcement Opportunities:</strong> Lost chance for school announcements or showing content like the 8th Grade DC trip video</li>
+                        <li><strong>Eliminated Mic Check:</strong> The planned dance act following Adanya was the last opportunity for a quick mic level check for the boys</li>
+                        <li><strong>Direct Performance Impact:</strong> Boys went on stage with untested levels on three separate wireless microphone systems</li>
+                    </ul>
+                </div>
+                
+                <div class="root-cause-box">
+                    <div class="root-cause-header">⚠️ ROOT CAUSE</div>
+                    <p><strong>Consolidated Decision Authority:</strong> In the heat of live performance, the current model requires one person to balance audience flow, artistic vision, and technical requirements simultaneously. This concentration of decision-making—while ensuring unified direction—can inadvertently impact technical needs when split-second choices are required.</p>
+                    
+                    <p><strong>Scheduling Conflicts:</strong> The 7th Grade Boys had conflicting school-sanctioned track and choir events that prevented them from attending soundcheck and dress rehearsal.</p>
+                    
+                    <p><strong>Budget Constraints:</strong> Limited budget meant jerry-rigging four separate wireless systems instead of having a proper 4-8 channel system.</p>
+                </div>
+                
+                <div class="solution-box">
+                    <div class="solution-header">✅ SOLUTION: Live Event Protocol</div>
+                    <ol>
+                        <li>The intermission should be considered a non-negotiable production element</li>
+                        <li>Real-time changes to running order should be avoided unless absolutely critical</li>
+                        <li>Establish a core leadership committee for any live event changes</li>
+                        <li><em>Future Investment: School investment in professional 4-8 channel microphone system would enable group performances</em></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="critical-issue">
+                <div class="issue-header">Issue 4: Public Technical Call-Outs</div>
+                
+                <div class="problem-box">
+                    <div class="problem-header">🚨 WHAT HAPPENED</div>
+                    <p>Throughout the event, the technical lead was repeatedly addressed by name on the microphone regarding technical issues, many of which were direct results of the aforementioned external factors (speaker outage, program changes impacting automation)</p>
+                    
+                    <p><strong>System Impact:</strong> This created an unfair public perception, especially as the full context of the issues was not shared with the audience</p>
+                </div>
+                
+                <div class="root-cause-box">
+                    <div class="root-cause-header">⚠️ ROOT CAUSE</div>
+                    <p>The current communication structure during live events defaults to public address when technical adjustments are needed. Without established discrete communication protocols, the person with the microphone naturally addresses the most visible technical position directly. The audience lacks context about external factors affecting technical operations.</p>
+                </div>
+                
+                <div class="solution-box">
+                    <div class="solution-header">✅ SOLUTION: Discreet Communication Channels</div>
+                    <ol>
+                        <li>Establish clear, discreet communication channels (e.g., designated runner, subtle hand signals, or brief off-stage consults)</li>
+                        <li>Consider walkie-talkies as a long-term equipment purchase for backstage-to-booth communication</li>
+                        <li>Avoid public troubleshooting or calling out individuals by name</li>
+                        <li>Use generic terms like "DJ" or "Sound Booth" if a general cue is needed</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="critical-issue">
+                <div class="issue-header">Issue 5: Venue Environmental Challenges</div>
+                
+                <div class="problem-box">
+                    <div class="problem-header">🚨 WHAT HAPPENED</div>
+                    <p>The spotlights were not effective during the first half of the show, and the venue's acoustic properties amplified technical issues</p>
+                    
+                    <p><strong>System Impact:</strong></p>
+                    <ul>
+                        <li>Ambient daylight prevented spotlights from creating dramatic effect</li>
+                        <li>Hard surfaces (no carpet) created high frequency reflectivity that emphasized mix imbalances</li>
+                        <li>The single unplugged speaker issue was magnified by the venue's acoustic properties</li>
+                        <li>Limited power infrastructure (one backstage plug, four front-stage plugs) constrained equipment placement</li>
+                    </ul>
+                </div>
+                
+                <div class="root-cause-box">
+                    <div class="root-cause-header">⚠️ ROOT CAUSE</div>
+                    <p>The venue presents specific design constraints that require intentional adaptation. The combination of limited power infrastructure, hard reflective surfaces, and uncontrolled ambient lighting creates a challenging production environment where the margin for error is significantly reduced.</p>
+                </div>
+                
+                <div class="solution-box">
+                    <div class="solution-header">✅ SOLUTION: Environmental Adaptation Strategies</div>
+                    <ol>
+                        <li>Assign curtain management to the Stage & Backstage Manager role - closing curtains after intermission creates a dramatic tonal shift and enables spotlight effectiveness</li>
+                        <li>Account for high-frequency reflectivity in sound design and speaker placement</li>
+                        <li>Create detailed venue mapping including power locations and acoustic considerations</li>
+                        <li>Consider portable acoustic treatment options for future shows</li>
+                        <li>Use intermission as a strategic plot point for environmental transformation (bright to dramatic)</li>
+                    </ol>
+                </div>
+            </div>
+        </details>
+    </div>
+
+    <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        <h2 style="border-bottom: none; text-align: center;">Ready to Create Expressions Magic?</h2>
+        <p style="text-align: center; font-size: 1.1em;">Share this guide with potential team members and watch the transformation begin!</p>
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="window.print()" style="background: white; color: #667eea; border: none; padding: 12px 30px; margin: 5px; border-radius: 25px; font-size: 16px; cursor: pointer; font-weight: bold;">📄 Save as PDF</button>
+            <button onclick="shareDocument()" style="background: white; color: #667eea; border: none; padding: 12px 30px; margin: 5px; border-radius: 25px; font-size: 16px; cursor: pointer; font-weight: bold;">📤 Share</button>
         </div>
-    </section>
-    
-    <section id="contact" class="contact">
-        <h2>Contact IO Soul</h2>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:iosoulsounds@gmail.com">iosoulsounds@gmail.com</a></p>
-            <p>Website: <a href="https://linktr.ee/iosoul">linktr.ee/iosoul</a></p>
-            <p>Phone: 415-375-2934</p>
-            <p style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #FFD700; margin-top: 30px;">Souls & Son</p>
-        </div>
-        <div class="social-links">
-            <a href="https://linktr.ee/iosoul" target="_blank">LT</a>
-            <a href="mailto:iosoulsound@gmail.com">✉</a>
-            <a href="#" target="_blank">♪</a>
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 IO Soul Sounds. All rights reserved. | Souls & Son</p>
-    </footer>
+    </div>
     
     <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Add some interactive elements
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(0, 0, 0, 0.95)';
+        function shareDocument() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Expressions 6.0: Systems Guide',
+                    text: 'Check out this guide for creating sustainable volunteer-run school productions',
+                    url: window.location.href
+                }).catch(err => console.log('Error sharing:', err));
             } else {
-                header.style.background = 'rgba(0, 0, 0, 0.9)';
+                // Fallback for browsers that don't support Web Share API
+                const dummy = document.createElement('input');
+                document.body.appendChild(dummy);
+                dummy.value = window.location.href;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                alert('Link copied to clipboard!');
             }
-        });
+        }
     </script>
 </body>
 </html>
